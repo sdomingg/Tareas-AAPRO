@@ -1,0 +1,17 @@
+/* HEADER */ 
+
+body {
+    background-color: lightgrey;
+    color: black;
+    font-size: 19px;
+}
+
+.Menu-pag {
+    background-color: aliceblue;
+    font-size: 18px;
+    width: 200px;
+    list-style: none;
+
+}
+
+/* ACA SE PUEDE DEJAR COMENTARIOS SIN QUE AFECTEN A LA PAG */
