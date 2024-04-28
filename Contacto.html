@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <img src="header.jpg" alt="">
+    <header class="headerinicio">
+        <img src="./Imagenes/header.jpg" alt="">
         <h1>Diseño de página</h1>
         <nav>
-            <ul>
+            <ul class="menupag">
                 <li><b><a href="./index.html">Inicio</a></b></li>
                 <li><b><u><a href="./Contacto.html">Contacto</a></u></b></li>
                 <li><b><u><a href="./Horarios de atencion.html">Horarios de atencion</a></u></b></li>
@@ -21,18 +22,17 @@
             </ul>
         </nav>
     </header>
-    <main>
-
+    <main class="formulario">
         <form action="#" method="get">
-            <div>
+            <div class="nombreform">
                 <label for="Nombre">Nombre:</label>
                 <input type="text" name="Nombre" id="Nombre" placeholder="pepe" required>
             </div>
-            <div>
+            <div class="apellidoform">
                 <label for="Apellido">Apellido:</label>
                 <input type="text" name="Apellido" id="Apellido" placeholder="popo" required>
             </div>
-            <div>
+            <div class="paisform">
                 <select name="Pais" id="">
                     <option value="Pais">ARG</option>
                     <option value="Pais">FRA</option>
@@ -40,14 +40,14 @@
                 </select>
             </div>
             <input type="submit" value="Ingresar">
-            <div>
+            <div class="contactoform">
                 <textarea name="Contacto" id="" cols="30" rows="10"></textarea>
             </div>
             <input type="submit" value="Enviar">
         </form>
     </main>
 </body>
-<footer>
+<footer class="footerinicio">
     <p>©Copyright 2024</p>
 </footer>
 

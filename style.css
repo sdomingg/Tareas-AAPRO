@@ -1,17 +1,153 @@
-/* HEADER */ 
+/* INDEX */
 
-body {
-    background-color: lightgrey;
-    color: black;
-    font-size: 19px;
+.headerinicio {
+    width: 100%;
+    height: auto;
+    background-color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
-.Menu-pag {
-    background-color: aliceblue;
-    font-size: 18px;
-    width: 200px;
+.menupag{
+    padding: 25px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
     list-style: none;
-
 }
 
-/* ACA SE PUEDE DEJAR COMENTARIOS SIN QUE AFECTEN A LA PAG */
+.footerinicio {
+    width: 100%;
+    height: auto;
+    background-color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.maininicio {
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+/* Horarios atencion */
+
+.bodyhorarios {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #f4f3ef;
+}
+
+.days1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3351ac;
+}
+
+.days2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: crimson;
+}
+
+.days3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.days4 {
+    font-size: 25px;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+.days5 {
+    font-size: 25px;
+    font-weight: bold;
+    color: cadetblue;
+}
+
+.days6 {
+    font-size: 25px;
+    font-weight: bold;
+    color: coral;
+}
+
+.days7 {
+    font-size: 25px;
+    font-weight: bold;
+    color: forestgreen;
+}
+
+.hours1 {
+    font-style: italic;
+    color: #3351ac;
+}
+
+.hours2 {
+    font-style: italic;
+    color: crimson;
+}
+
+.hours3 {
+    font-style: italic;
+    color: blueviolet;
+}
+
+.hours4 {
+    font-style: italic;
+    color: darkslateblue;
+}
+
+.hours5 {
+    font-style: italic;
+    color: cadetblue;
+}
+
+.hours6 {
+    font-style: italic;
+    color: coral;
+}
+
+.hours7 {
+    font-style: italic;
+    color: forestgreen;
+}
+
+.avisocorrido {
+    font-weight: bold;
+}
+
+/* CUESTIONARIO */
+
+.formulario {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.nombreform {
+    padding: 25px;
+    border-top: 5px solid #ac5bac;
+    border-bottom: 2px solid #ac5bac;
+    border-left: 2px solid #ac5bac;
+    border-right: 2px solid #ac5bac;
+}
+
+.apellidoform{
+    padding: 25px;
+    border-top: 2px solid #5a5adb;
+    border-bottom: 5px solid #5a5adb;
+    border-left: 2px solid #5a5adb;
+    border-right: 2px solid #5a5adb;
+}
+
+.contactoform{
+    padding: 25px;
+    border-top: 2px solid black;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
