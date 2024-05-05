@@ -2,24 +2,22 @@
 
 .headerinicio {
     width: 100%;
-    height: auto;
     background-color: palevioletred;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
 
 .menupag{
-    padding: 25px;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
     list-style: none;
+    align-items: center;
 }
 
 .footerinicio {
     width: 100%;
-    height: auto;
     background-color: palevioletred;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
@@ -27,7 +25,6 @@
 
 .maininicio {
     width: 100%;
-    height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
@@ -136,7 +133,7 @@
     border-right: 2px solid #ac5bac;
 }
 
-.apellidoform{
+.apellidoform {
     padding: 25px;
     border-top: 2px solid #5a5adb;
     border-bottom: 5px solid #5a5adb;
@@ -144,7 +141,7 @@
     border-right: 2px solid #5a5adb;
 }
 
-.contactoform{
+.contactoform {
     padding: 25px;
     border-top: 2px solid black;
     border-bottom: 5px solid black;
