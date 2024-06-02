@@ -1,150 +1,326 @@
-/* INDEX */
-
-.headerinicio {
-    width: 100%;
-    background-color: palevioletred;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.menupag{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+/* Estilos para el contenedor de la navegación */
+.header {
+    background-color: #F2F2F0;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-around;
-    list-style: none;
+    flex-direction: column;
     align-items: center;
 }
 
-.footerinicio {
+.logo-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    margin-right: 10px;
+}
+
+.title {
+    color: #595856;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px #888888; /* Sombra de texto en relieve */
+
+}
+
+/* Estilos para la lista de navegación */
+.navbar {
     width: 100%;
-    background-color: palevioletred;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
 }
 
-.maininicio {
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para los elementos de la lista */
+.navbar ul li {
+    padding: 14px 20px;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar ul li a {
+    color: #0D0000;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto de hover para los enlaces */
+.navbar ul li a:hover {
+    background-color: #8C8B88;
+    color: #fff;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.navbar ul li a:active,
+.navbar ul li a:focus {
+    background-color: #595856;
+    color: #fff;
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.gallery-title {
+    background-color: #F2F2F0;
+    color: #595856;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: underline; /* Subrayado */
+}
+
+.image-container1 {
+    width: calc(25% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-container1 img {
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+/* Media queries para una mejor adaptabilidad */
+@media (max-width: 1200px) {
+    .image-container {
+        width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: calc(100% - 20px);
+    }
+}
+
+.footercopy {
+    background-color: #F2F2F0;
+    color: #0D0000;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos para el formulario de contacto */
+.contact-form-section {
+    background-color: #F2F2F0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
 }
 
-/* Horarios atencion */
+.form-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #595856;
+}
 
-.bodyhorarios {
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #575757;
+}
+/* Estilos para la sección de horarios */
+.hours-section {
+    background-color: #F2F2F0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: #f4f3ef;
 }
 
-.days1 {
-    font-size: 25px;
-    font-weight: bold;
-    color: #3351ac;
+.hours-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #595856;
 }
 
-.days2 {
-    font-size: 25px;
-    font-weight: bold;
-    color: crimson;
+.hours-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px #0000001a;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-.days3 {
-    font-size: 25px;
-    font-weight: bold;
-    color: blueviolet;
+.hours-table th,
+.hours-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.days4 {
-    font-size: 25px;
-    font-weight: bold;
-    color: darkslateblue;
+.hours-table th {
+    background-color: #333;
+    color: white;
 }
 
-.days5 {
-    font-size: 25px;
-    font-weight: bold;
-    color: cadetblue;
+/* Estilos para la galería de imágenes */
+
+.image-gallery2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    align-items: center;
 }
 
-.days6 {
-    font-size: 25px;
-    font-weight: bold;
-    color: coral;
+.gallerytitle{
+    background-color: #F2F2F0;
+    color: #595856;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.days7 {
-    font-size: 25px;
-    font-weight: bold;
-    color: forestgreen;
+.image-container {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.hours1 {
-    font-style: italic;
-    color: #3351ac;
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.hours2 {
-    font-style: italic;
-    color: crimson;
-}
-
-.hours3 {
-    font-style: italic;
-    color: blueviolet;
-}
-
-.hours4 {
-    font-style: italic;
-    color: darkslateblue;
-}
-
-.hours5 {
-    font-style: italic;
-    color: cadetblue;
-}
-
-.hours6 {
-    font-style: italic;
-    color: coral;
-}
-
-.hours7 {
-    font-style: italic;
-    color: forestgreen;
-}
-
-.avisocorrido {
-    font-weight: bold;
-}
-
-/* CUESTIONARIO */
-
-.formulario {
+.product-info {
+    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
 }
 
-.nombreform {
-    padding: 25px;
-    border-top: 5px solid #ac5bac;
-    border-bottom: 2px solid #ac5bac;
-    border-left: 2px solid #ac5bac;
-    border-right: 2px solid #ac5bac;
+.product-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.apellidoform {
-    padding: 25px;
-    border-top: 2px solid #5a5adb;
-    border-bottom: 5px solid #5a5adb;
-    border-left: 2px solid #5a5adb;
-    border-right: 2px solid #5a5adb;
+.product-description {
+    color: #666;
+    margin-bottom: 10px;
 }
 
-.contactoform {
-    padding: 25px;
-    border-top: 2px solid black;
-    border-bottom: 5px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+.product-price {
+    font-weight: bold;
+    color: #333; }
+
+/* Estilos para la sección "Sobre Nosotros" */
+.about-section {
+    background-color: #F2F2F0;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-box {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #595856;
+}
+
+.about-content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
 }

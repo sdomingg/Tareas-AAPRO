@@ -1,49 +1,137 @@
-<!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Este es el titulo de la pestaña</title>
+    <title>Aquamarine Books</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<!--ACA SE PUEDEN DEJAR COMENTS SIN QUE AFECTE-->
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            var message = "¿Estás seguro de que deseas abandonar la página?";
+            e.preventDefault(); // Algunos navegadores requieren esto para mostrar el mensaje
+            e.returnValue = message; // Para otros navegadores
+            return message; // Para otros navegadores
+        });
+    </script>
+    <title>Calculador de Envío</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Coordenadas de San Nicolás de los Arroyos
+            var sanNicolasCoords = {
+                lat: -33.3344,
+                lon: -60.2106
+            };
 
-<body class="bodyinicio">
-    <header class="headerinicio">
-        <img class="img1" src="./Imagenes/header.jpg" alt="">
-        <h1>Diseño de página</h1>
-    </header>
-        <nav>
+            // Función para calcular la distancia entre dos puntos (en km) usando la fórmula de Haversine
+            function calculateDistance(lat1, lon1, lat2, lon2) {
+                var R = 6371; // Radio de la Tierra en km
+                var dLat = (lat2 - lat1) * Math.PI / 180;
+                var dLon = (lon2 - lon1) * Math.PI / 180;
+                var a =
+                    0.5 - Math.cos(dLat) / 2 +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    (1 - Math.cos(dLon)) / 2;
+                return R * 2 * Math.asin(Math.sqrt(a));
+            }
+
+            // Función para manejar la obtención de la ubicación del usuario
+            function handleLocation(position) {
+                var userCoords = {
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                };
+
+                var distance = calculateDistance(
+                    sanNicolasCoords.lat, sanNicolasCoords.lon,
+                    userCoords.lat, userCoords.lon
+                );
+
+                var shippingCost;
+                if (distance <= 40) {
+                    shippingCost = 0;
+                    alert("El envío es gratuito. Estás a " + distance.toFixed(2) + " km de San Nicolás de los Arroyos.");
+                } else {
+                    shippingCost = 900;
+                    alert("El costo del envío es de $900. Estás a " + distance.toFixed(2) + " km de San Nicolás de los Arroyos.");
+                }
+
+                document.getElementById('shipping-cost').innerText = "Costo de Envío: $" + shippingCost;
+            }
+
+            // Función para manejar errores de geolocalización
+            function handleError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        alert("Permiso denegado. El costo de envío por defecto es de $900.");
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert("Ubicación no disponible. El costo de envío por defecto es de $900.");
+                        break;
+                    case error.TIMEOUT:
+                        alert("Tiempo de espera agotado. El costo de envío por defecto es de $900.");
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        alert("Error desconocido. El costo de envío por defecto es de $900.");
+                        break;
+                }
+                document.getElementById('shipping-cost').innerText = "Costo de Envío: $900";
+            }
+
+            // Solicitar geolocalización del usuario
+            if (navigator.geolocation) {
+                alert("Para calcular el costo de envío, necesitamos tu ubicación.");
+                navigator.geolocation.getCurrentPosition(handleLocation, handleError);
+            } else {
+                alert("Geolocalización no soportada por este navegador. El costo de envío por defecto es de $900.");
+                document.getElementById('shipping-cost').innerText = "Costo de Envío: $900";
+            }
+        });
+    </script>
+    <title>Verificación de Edad</title>
+    <script>
+        window.onload = function () {
+            var isAdult = confirm("¿Eres mayor de edad? Si no lo eres, entra bajo tu propio riesgo.");
+            if (!isAdult) {
+                alert("Estás entrando bajo tu propio riesgo.");
+                // Aquí puedes redirigir a otra página si lo deseas
+                // window.location.href = "http://otra-pagina.com";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-title">
+            <img src="./Imagenes/header-removebg-preview.png" alt="Logo" class="logo">
+            <h1 class="title">AQUAMARINE BOOKS</h1>
+        </div>
+        <nav class="navbar">
             <ul>
-                <section class="menupag">
-                    <li><b><a class="op1" href="./index.html">Inicio</a></b></li>
-                    <li><b><u><a class="op1" href="./Contacto.html">Contacto</a></u></b></li>
-                    <li><b><u><a class="op1" href="./Horarios de atencion.html">Horarios de atencion</a></u></b></li>
-                    <li><b><u><a class="op1" href="./Nuestros productos.html">Nuestros productos</a></u></b></li>
-                    <li><b><u><a class="op1" href="./Conoce mas sobre nosotros.html">Conoce mas sobre nosotros</a></u></b>
-                    </li>
-                </section>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./Horarios de atención.html">Horarios de Atención</a></li>
+                <li><a href="./Nuestros Productos.html">Nuestros Productos</a></li>
+                <li><a href="./Conoce mas sobre nosotros.html">Conoce Más Sobre Nosotros</a></li>
             </ul>
         </nav>
-    <main class="maininicio">
-        <section>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <br>Dolorum, eos explicabo? Consequuntur delectus incidunt pariatur quos quisquam eligendi facere,
-                <br>tenetur rem id, voluptatibus quod? Quaerat similique dolorum laborum veniam cumque!
-            </h4>
-        </section>
-        <section>
-            <h2>Ingresos:</h2>
-            <img src="./Imagenes/ingresos.jpg" alt="" width="350" height="350">
+    </header>
+    <main>
+        <h2 class="gallery-title">NEW IN</h2>
+        <section class="image-gallery">
+            <div class="image-container">
+                <img src="./Imagenes/al final.jpg" alt="Imagen 1">
+            </div>
+            <div class="image-container">
+                <img src="./Imagenes/a little life.jpg" alt="Imagen 2">
+            </div>
+            <div class="image-container">
+                <img src="./Imagenes/1984.jpg" alt="Imagen 3">
+            </div>
         </section>
     </main>
-
-    <footer class="footerinicio">
-        <p>©Copyright 2024</p>
-    </footer>
-
 </body>
-
+<footer class="footercopy">
+    <p>all rights reserved to aquamarine books 2024</p>
+</footer>
 
 </html>
